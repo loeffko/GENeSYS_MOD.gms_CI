@@ -23,12 +23,12 @@ scalar starttime;
 starttime = jnow;
 
 $if not set data_file                    $setglobal data_file RegularParameters_None
-$if not set hourly_data_file             $setglobal hourly_data_file Timeseries_Europe_EnVis_REPowerEU++
+$if not set hourly_data_file             $setglobal hourly_data_file Timeseries_None
 $if not set switch_read_data_long        $setglobal switch_read_data_long 1
 $if not set elmod_nthhour                $setglobal elmod_nthhour 484
 $if not set elmod_starthour              $setglobal elmod_starthour 8
 $if not set year                         $setglobal year 2018
-$if not set data_base_region             $setglobal data_base_region DE
+$if not set data_base_region             $setglobal data_base_region Gondor
 $if not set timeseries                   $setglobal timeseries elmod
 $if not set solver                       $setglobal solver cplex
 
@@ -70,14 +70,14 @@ $if not set set_peaking_min_thermal      $setglobal set_peaking_min_thermal 0.5
 $if not set set_peaking_startyear        $setglobal set_peaking_startyear 2030
 $if not set set_peaking_minrun_share     $setglobal set_peaking_minrun_share 0.15
 
-$if not set model_region                 $setglobal model_region europe
+$if not set model_region                 $setglobal model_region middleearth
 $if not set eployment_data_file          $setglobal employment_data_file Employment_v01_06_11_2019
 $if not set threads                      $setglobal threads 6
 $if not set elmod_dunkelflaute           $setglobal elmod_dunkelflaute 0
 $if not set hydrogen_growthcost_multiplier $setglobal hydrogen_growthcost_multiplier 1
 
 
-$if not set emissionPathway              $setglobal emissionPathway NECPEssentials
+$if not set emissionPathway              $setglobal emissionPathway middleearth
 $if not set emissionScenario             $setglobal emissionScenario globalLimit
 
 $ifthen %switch_unixPath% == 1
